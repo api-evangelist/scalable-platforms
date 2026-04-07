@@ -13,17 +13,16 @@ apis:
     humanUrl: https://scalableplatforms.example.com/infrastructure
     baseUrl: https://api.scalableplatforms.example.com/v1/infrastructure
     tags:
-      - Infrastructure
       - Cloud
-      - IaaS
       - Compute
+      - IaaS
+      - Infrastructure
       - Storage
     properties:
       - type: Documentation
         url: https://docs.scalableplatforms.example.com/infrastructure
       - type: OpenAPI
-        url: 
-          https://api.scalableplatforms.example.com/v1/infrastructure/openapi.json
+        url: https://api.scalableplatforms.example.com/v1/infrastructure/openapi.json
       - type: Authentication
         url: https://docs.scalableplatforms.example.com/infrastructure/auth
     contact:
@@ -37,16 +36,15 @@ apis:
     humanUrl: https://scalableplatforms.example.com/autoscaling
     baseUrl: https://api.scalableplatforms.example.com/v1/autoscaling
     tags:
-      - Auto-scaling
+      - Auto-Scaling
       - Load Balancing
-      - Performance
       - Optimization
+      - Performance
     properties:
       - type: Documentation
         url: https://docs.scalableplatforms.example.com/autoscaling
       - type: OpenAPI
-        url: 
-          https://api.scalableplatforms.example.com/v1/autoscaling/openapi.json
+        url: https://api.scalableplatforms.example.com/v1/autoscaling/openapi.json
       - type: SDKs
         url: https://docs.scalableplatforms.example.com/autoscaling/sdks
     contact:
@@ -60,17 +58,16 @@ apis:
     humanUrl: https://scalableplatforms.example.com/monitoring
     baseUrl: https://api.scalableplatforms.example.com/v1/monitoring
     tags:
-      - Monitoring
-      - Metrics
-      - Observability
       - Alerts
       - Analytics
+      - Metrics
+      - Monitoring
+      - Observability
     properties:
       - type: Documentation
         url: https://docs.scalableplatforms.example.com/monitoring
       - type: OpenAPI
-        url: 
-          https://api.scalableplatforms.example.com/v1/monitoring/openapi.json
+        url: https://api.scalableplatforms.example.com/v1/monitoring/openapi.json
       - type: Status Page
         url: https://status.scalableplatforms.example.com
       - type: Webhooks
@@ -86,16 +83,15 @@ apis:
     baseUrl: https://api.scalableplatforms.example.com/v1/containers
     tags:
       - Containers
-      - Kubernetes
       - Docker
-      - Orchestration
+      - Kubernetes
       - Microservices
+      - Orchestration
     properties:
       - type: Documentation
         url: https://docs.scalableplatforms.example.com/containers
       - type: OpenAPI
-        url: 
-          https://api.scalableplatforms.example.com/v1/containers/openapi.json
+        url: https://api.scalableplatforms.example.com/v1/containers/openapi.json
       - type: Tutorials
         url: https://docs.scalableplatforms.example.com/containers/tutorials
     contact:
@@ -108,16 +104,15 @@ apis:
     humanUrl: https://scalableplatforms.example.com/loadbalancing
     baseUrl: https://api.scalableplatforms.example.com/v1/loadbalancing
     tags:
-      - Load Balancing
-      - Traffic Management
       - High Availability
+      - Load Balancing
       - Networking
+      - Traffic Management
     properties:
       - type: Documentation
         url: https://docs.scalableplatforms.example.com/loadbalancing
       - type: OpenAPI
-        url: 
-          https://api.scalableplatforms.example.com/v1/loadbalancing/openapi.json
+        url: https://api.scalableplatforms.example.com/v1/loadbalancing/openapi.json
     contact:
       - FN: Network Team
         email: network@scalableplatforms.example.com
@@ -131,8 +126,7 @@ maintainers:
     email: api-team@scalableplatforms.example.com
     url: https://scalableplatforms.example.com/about
 tags:
-  - Scalability
-  - Platform
   - Cloud Infrastructure
   - DevOps
-  - API
+  - Platform
+  - Scalability
