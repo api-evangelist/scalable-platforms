@@ -1,126 +1,138 @@
 name: Scalable Platforms
-description: A collection of APIs and resources for building and managing scalable platform infrastructure
+description: >-
+  A collection of APIs and resources for building and managing scalable platform infrastructure.
 image: https://example.com/scalable-platforms-logo.png
 url: https://scalableplatforms.example.com
 created: '2024-01-15'
 modified: '2024-01-15'
 apis:
-- name: Infrastructure Management API
-  description: Manage cloud infrastructure resources including compute, storage, and networking
-  image: https://example.com/infrastructure-api-icon.png
-  humanUrl: https://scalableplatforms.example.com/infrastructure
-  baseUrl: https://api.scalableplatforms.example.com/v1/infrastructure
-  tags:
-  - Infrastructure
-  - Cloud
-  - IaaS
-  - Compute
-  - Storage
-  properties:
-  - type: Documentation
-    url: https://docs.scalableplatforms.example.com/infrastructure
-  - type: OpenAPI
-    url: https://api.scalableplatforms.example.com/v1/infrastructure/openapi.json
-  - type: Authentication
-    url: https://docs.scalableplatforms.example.com/infrastructure/auth
-  contact:
-  - FN: Infrastructure Team
-    email: infrastructure@scalableplatforms.example.com
-    url: https://scalableplatforms.example.com/support
-- name: Auto-Scaling API
-  description: Dynamically scale resources based on demand with automated policies and rules
-  image: https://example.com/autoscaling-api-icon.png
-  humanUrl: https://scalableplatforms.example.com/autoscaling
-  baseUrl: https://api.scalableplatforms.example.com/v1/autoscaling
-  tags:
-  - Auto-scaling
-  - Load Balancing
-  - Performance
-  - Optimization
-  properties:
-  - type: Documentation
-    url: https://docs.scalableplatforms.example.com/autoscaling
-  - type: OpenAPI
-    url: https://api.scalableplatforms.example.com/v1/autoscaling/openapi.json
-  - type: SDKs
-    url: https://docs.scalableplatforms.example.com/autoscaling/sdks
-  contact:
-  - FN: Scaling Team
-    email: scaling@scalableplatforms.example.com
-- name: Monitoring & Metrics API
-  description: Real-time monitoring, metrics collection, and alerting for platform health and performance
-  image: https://example.com/monitoring-api-icon.png
-  humanUrl: https://scalableplatforms.example.com/monitoring
-  baseUrl: https://api.scalableplatforms.example.com/v1/monitoring
-  tags:
-  - Monitoring
-  - Metrics
-  - Observability
-  - Alerts
-  - Analytics
-  properties:
-  - type: Documentation
-    url: https://docs.scalableplatforms.example.com/monitoring
-  - type: OpenAPI
-    url: https://api.scalableplatforms.example.com/v1/monitoring/openapi.json
-  - type: Status Page
-    url: https://status.scalableplatforms.example.com
-  - type: Webhooks
-    url: https://docs.scalableplatforms.example.com/monitoring/webhooks
-  contact:
-  - FN: Monitoring Team
-    email: monitoring@scalableplatforms.example.com
-- name: Container Orchestration API
-  description: Deploy, manage, and scale containerized applications across clusters
-  image: https://example.com/container-api-icon.png
-  humanUrl: https://scalableplatforms.example.com/containers
-  baseUrl: https://api.scalableplatforms.example.com/v1/containers
-  tags:
-  - Containers
-  - Kubernetes
-  - Docker
-  - Orchestration
-  - Microservices
-  properties:
-  - type: Documentation
-    url: https://docs.scalableplatforms.example.com/containers
-  - type: OpenAPI
-    url: https://api.scalableplatforms.example.com/v1/containers/openapi.json
-  - type: Tutorials
-    url: https://docs.scalableplatforms.example.com/containers/tutorials
-  contact:
-  - FN: Container Team
-    email: containers@scalableplatforms.example.com
-- name: Load Balancing API
-  description: Distribute traffic across multiple resources with intelligent load balancing
-  image: https://example.com/loadbalancer-api-icon.png
-  humanUrl: https://scalableplatforms.example.com/loadbalancing
-  baseUrl: https://api.scalableplatforms.example.com/v1/loadbalancing
-  tags:
-  - Load Balancing
-  - Traffic Management
-  - High Availability
-  - Networking
-  properties:
-  - type: Documentation
-    url: https://docs.scalableplatforms.example.com/loadbalancing
-  - type: OpenAPI
-    url: https://api.scalableplatforms.example.com/v1/loadbalancing/openapi.json
-  contact:
-  - FN: Network Team
-    email: network@scalableplatforms.example.com
+  - name: Infrastructure Management API
+    description: >-
+      Manage cloud infrastructure resources including compute, storage, and networking.
+    image: https://example.com/infrastructure-api-icon.png
+    humanUrl: https://scalableplatforms.example.com/infrastructure
+    baseUrl: https://api.scalableplatforms.example.com/v1/infrastructure
+    tags:
+      - Infrastructure
+      - Cloud
+      - IaaS
+      - Compute
+      - Storage
+    properties:
+      - type: Documentation
+        url: https://docs.scalableplatforms.example.com/infrastructure
+      - type: OpenAPI
+        url: 
+          https://api.scalableplatforms.example.com/v1/infrastructure/openapi.json
+      - type: Authentication
+        url: https://docs.scalableplatforms.example.com/infrastructure/auth
+    contact:
+      - FN: Infrastructure Team
+        email: infrastructure@scalableplatforms.example.com
+        url: https://scalableplatforms.example.com/support
+  - name: Auto-Scaling API
+    description: >-
+      Dynamically scale resources based on demand with automated policies and rules.
+    image: https://example.com/autoscaling-api-icon.png
+    humanUrl: https://scalableplatforms.example.com/autoscaling
+    baseUrl: https://api.scalableplatforms.example.com/v1/autoscaling
+    tags:
+      - Auto-scaling
+      - Load Balancing
+      - Performance
+      - Optimization
+    properties:
+      - type: Documentation
+        url: https://docs.scalableplatforms.example.com/autoscaling
+      - type: OpenAPI
+        url: 
+          https://api.scalableplatforms.example.com/v1/autoscaling/openapi.json
+      - type: SDKs
+        url: https://docs.scalableplatforms.example.com/autoscaling/sdks
+    contact:
+      - FN: Scaling Team
+        email: scaling@scalableplatforms.example.com
+  - name: Monitoring & Metrics API
+    description: >-
+      Real-time monitoring, metrics collection, and alerting for platform health and
+      performance.
+    image: https://example.com/monitoring-api-icon.png
+    humanUrl: https://scalableplatforms.example.com/monitoring
+    baseUrl: https://api.scalableplatforms.example.com/v1/monitoring
+    tags:
+      - Monitoring
+      - Metrics
+      - Observability
+      - Alerts
+      - Analytics
+    properties:
+      - type: Documentation
+        url: https://docs.scalableplatforms.example.com/monitoring
+      - type: OpenAPI
+        url: 
+          https://api.scalableplatforms.example.com/v1/monitoring/openapi.json
+      - type: Status Page
+        url: https://status.scalableplatforms.example.com
+      - type: Webhooks
+        url: https://docs.scalableplatforms.example.com/monitoring/webhooks
+    contact:
+      - FN: Monitoring Team
+        email: monitoring@scalableplatforms.example.com
+  - name: Container Orchestration API
+    description: >-
+      Deploy, manage, and scale containerized applications across clusters.
+    image: https://example.com/container-api-icon.png
+    humanUrl: https://scalableplatforms.example.com/containers
+    baseUrl: https://api.scalableplatforms.example.com/v1/containers
+    tags:
+      - Containers
+      - Kubernetes
+      - Docker
+      - Orchestration
+      - Microservices
+    properties:
+      - type: Documentation
+        url: https://docs.scalableplatforms.example.com/containers
+      - type: OpenAPI
+        url: 
+          https://api.scalableplatforms.example.com/v1/containers/openapi.json
+      - type: Tutorials
+        url: https://docs.scalableplatforms.example.com/containers/tutorials
+    contact:
+      - FN: Container Team
+        email: containers@scalableplatforms.example.com
+  - name: Load Balancing API
+    description: >-
+      Distribute traffic across multiple resources with intelligent load balancing.
+    image: https://example.com/loadbalancer-api-icon.png
+    humanUrl: https://scalableplatforms.example.com/loadbalancing
+    baseUrl: https://api.scalableplatforms.example.com/v1/loadbalancing
+    tags:
+      - Load Balancing
+      - Traffic Management
+      - High Availability
+      - Networking
+    properties:
+      - type: Documentation
+        url: https://docs.scalableplatforms.example.com/loadbalancing
+      - type: OpenAPI
+        url: 
+          https://api.scalableplatforms.example.com/v1/loadbalancing/openapi.json
+    contact:
+      - FN: Network Team
+        email: network@scalableplatforms.example.com
 include:
-- name: Developer Resources
-  url: https://scalableplatforms.example.com/apis/developer-resources.json
-- name: Security APIs
-  url: https://scalableplatforms.example.com/apis/security.json
+  - name: Developer Resources
+    url: https://scalableplatforms.example.com/apis/developer-resources.json
+  - name: Security APIs
+    url: https://scalableplatforms.example.com/apis/security.json
 maintainers:
-- FN: Scalable Platforms API Team
-  email: api-team@scalableplatforms.example.com
-  url: https://scalableplatforms.example.com/about
+  - FN: Scalable Platforms API Team
+    email: api-team@scalableplatforms.example.com
+    url: https://scalableplatforms.example.com/about
 tags:
-- Scalability
-- Platform
-- Cloud Infrastructure
-- DevOps
-- API
+  - Scalability
+  - Platform
+  - Cloud Infrastructure
+  - DevOps
+  - API
