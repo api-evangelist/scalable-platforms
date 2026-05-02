@@ -1,101 +1,178 @@
-# Scalable Platforms (scalable-platforms)
-A collection of APIs and resources for building and managing scalable platform infrastructure
+# Scalable Platforms
 
-**URL:** [Visit APIs.json URL](https://scalableplatforms.example.com)
+A subject-matter collection covering APIs, tools, and platforms for building and deploying scalable applications. This topic encompasses Platform-as-a-Service (PaaS) providers, developer experience platforms, deployment automation, serverless computing, container platforms, and edge computing tools. Covers Vercel, Netlify, Cloudflare, Heroku, Fly.io, Railway, Render, and Northflank.
 
-## Tags:
+**URL:** [https://raw.githubusercontent.com/api-evangelist/scalable-platforms/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/scalable-platforms/refs/heads/main/apis.yml)
 
- - Scalability, Platform, Cloud Infrastructure, DevOps, API
+## Tags
+
+Cloud Infrastructure, Deployment, Developer Experience, DevOps, PaaS, Platform, Scalability, Serverless
 
 ## Timestamps
 
-- **Created:** 2024-01-15 
-- **Modified:** 2024-01-15 
+- **Created:** 2024-01-15
+- **Modified:** 2026-05-02
 
 ## APIs
 
-### Infrastructure Management API
-Manage cloud infrastructure resources including compute, storage, and networking
+### Vercel REST API
+Frontend cloud platform for Next.js and JavaScript frameworks with global edge network, automatic scaling, and zero-config deployments.
 
-**Human URL:** [https://scalableplatforms.example.com/infrastructure](https://scalableplatforms.example.com/infrastructure)
+**Human URL:** [https://vercel.com/](https://vercel.com/)
 
+#### Tags
 
-#### Tags:
-
- - Infrastructure, Cloud, IaaS, Compute, Storage
-
-#### Properties
-
-- [Documentation](https://docs.scalableplatforms.example.com/infrastructure)
-- [OpenAPI](https://api.scalableplatforms.example.com/v1/infrastructure/openapi.json)
-- [Authentication](https://docs.scalableplatforms.example.com/infrastructure/auth)
-
-### Auto-Scaling API
-Dynamically scale resources based on demand with automated policies and rules
-
-**Human URL:** [https://scalableplatforms.example.com/autoscaling](https://scalableplatforms.example.com/autoscaling)
-
-
-#### Tags:
-
- - Auto-scaling, Load Balancing, Performance, Optimization
+CDN, Deployment, Edge Computing, Frontend, Next.js, Serverless, Vercel
 
 #### Properties
 
-- [Documentation](https://docs.scalableplatforms.example.com/autoscaling)
-- [OpenAPI](https://api.scalableplatforms.example.com/v1/autoscaling/openapi.json)
-- [SDKs](https://docs.scalableplatforms.example.com/autoscaling/sdks)
+- [Documentation](https://vercel.com/docs/rest-api)
+- [OpenAPI](https://openapi.vercel.sh/)
+- [Getting Started](https://vercel.com/docs)
+- [Pricing](https://vercel.com/pricing)
+- [SDK](https://github.com/vercel/sdk)
 
-### Monitoring & Metrics API
-Real-time monitoring, metrics collection, and alerting for platform health and performance
+### Netlify API
+Web platform for JAMstack applications with atomic deployments, instant rollbacks, serverless functions, and edge functions.
 
-**Human URL:** [https://scalableplatforms.example.com/monitoring](https://scalableplatforms.example.com/monitoring)
+**Human URL:** [https://www.netlify.com/](https://www.netlify.com/)
 
+#### Tags
 
-#### Tags:
-
- - Monitoring, Metrics, Observability, Alerts, Analytics
-
-#### Properties
-
-- [Documentation](https://docs.scalableplatforms.example.com/monitoring)
-- [OpenAPI](https://api.scalableplatforms.example.com/v1/monitoring/openapi.json)
-- [Status Page](https://status.scalableplatforms.example.com)
-- [Webhooks](https://docs.scalableplatforms.example.com/monitoring/webhooks)
-
-### Container Orchestration API
-Deploy, manage, and scale containerized applications across clusters
-
-**Human URL:** [https://scalableplatforms.example.com/containers](https://scalableplatforms.example.com/containers)
-
-
-#### Tags:
-
- - Containers, Kubernetes, Docker, Orchestration, Microservices
+CDN, CI/CD, Deployment, Frontend, JAMstack, Netlify, Serverless
 
 #### Properties
 
-- [Documentation](https://docs.scalableplatforms.example.com/containers)
-- [OpenAPI](https://api.scalableplatforms.example.com/v1/containers/openapi.json)
-- [Tutorials](https://docs.scalableplatforms.example.com/containers/tutorials)
+- [Documentation](https://docs.netlify.com/api/get-started/)
+- [OpenAPI](https://open-api.netlify.com/)
+- [Getting Started](https://docs.netlify.com/)
+- [Pricing](https://www.netlify.com/pricing/)
 
-### Load Balancing API
-Distribute traffic across multiple resources with intelligent load balancing
+### Cloudflare API
+Global edge platform managing DNS, CDN, Workers (edge functions), Pages, R2 storage, D1 database, and DDoS protection.
 
-**Human URL:** [https://scalableplatforms.example.com/loadbalancing](https://scalableplatforms.example.com/loadbalancing)
+**Human URL:** [https://www.cloudflare.com/](https://www.cloudflare.com/)
 
+#### Tags
 
-#### Tags:
-
- - Load Balancing, Traffic Management, High Availability, Networking
+CDN, Cloudflare, DNS, Edge Computing, Security, Serverless, Workers
 
 #### Properties
 
-- [Documentation](https://docs.scalableplatforms.example.com/loadbalancing)
-- [OpenAPI](https://api.scalableplatforms.example.com/v1/loadbalancing/openapi.json)
+- [Documentation](https://developers.cloudflare.com/api/)
+- [OpenAPI](https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.yaml)
+- [Getting Started](https://developers.cloudflare.com/)
+- [Pricing](https://www.cloudflare.com/plans/)
+- [SDK](https://github.com/cloudflare/cloudflare-typescript)
+
+### Heroku Platform API
+Pioneer "git push" PaaS managing apps, dynos, add-ons, pipelines, and private spaces; owned by Salesforce.
+
+**Human URL:** [https://www.heroku.com/](https://www.heroku.com/)
+
+#### Tags
+
+Deployment, Dynos, Heroku, PaaS, Pipelines, Salesforce
+
+#### Properties
+
+- [Documentation](https://devcenter.heroku.com/articles/platform-api-reference)
+- [OpenAPI](https://devcenter.heroku.com/api-docs)
+- [Pricing](https://www.heroku.com/pricing)
+
+### Fly.io Machines API
+Deploy Docker containers globally at the edge with Machines API; supports managed Postgres, GPU instances, Kubernetes, object storage, and scale-to-zero.
+
+**Human URL:** [https://fly.io/](https://fly.io/)
+
+#### Tags
+
+Containers, Deployment, Edge Computing, Fly.io, Global Deployment, Scale To Zero
+
+#### Properties
+
+- [Documentation](https://fly.io/docs/machines/api/)
+- [OpenAPI](https://raw.githubusercontent.com/superfly/fly-openapi/refs/heads/main/openapi.yaml)
+- [Getting Started](https://fly.io/docs/getting-started/)
+- [Pricing](https://fly.io/docs/about/pricing/)
+
+### Railway API
+Modern deployment platform with usage-based pricing, excellent developer experience, persistent volumes, private networking, and one-click databases.
+
+**Human URL:** [https://railway.app/](https://railway.app/)
+
+#### Tags
+
+Containers, Deployment, Developer Experience, PaaS, Railway, Usage-Based Pricing
+
+#### Properties
+
+- [Documentation](https://docs.railway.app/reference/public-api)
+- [Getting Started](https://docs.railway.app/)
+- [Pricing](https://railway.app/pricing)
+
+### Render API
+Modern Heroku alternative with free tier, managed databases, background workers, cron jobs, auto-scaling, and private networking.
+
+**Human URL:** [https://render.com/](https://render.com/)
+
+#### Tags
+
+Containers, Deployment, Managed Databases, PaaS, Render, Serverless
+
+#### Properties
+
+- [Documentation](https://api-docs.render.com/reference/)
+- [OpenAPI](https://raw.githubusercontent.com/renderinc/openapi-specs/main/openapi.yaml)
+- [Getting Started](https://render.com/docs/)
+- [Pricing](https://render.com/pricing)
+
+### Northflank API
+DevOps platform with container deployments, managed databases, jobs, preview environments, full Kubernetes backend, and BYOC support.
+
+**Human URL:** [https://northflank.com/](https://northflank.com/)
+
+#### Tags
+
+BYOC, CI/CD, Containers, Deployment, Kubernetes, Managed Databases, Northflank, PaaS
+
+#### Properties
+
+- [Documentation](https://northflank.com/docs/v1/api/overview)
+- [OpenAPI](https://api.northflank.com/v1/openapi.json)
+- [Getting Started](https://northflank.com/docs/)
+- [Pricing](https://northflank.com/pricing)
+
+## Schemas
+
+| Artifact | Description |
+|---|---|
+| [Platform Deployment Schema](json-schema/scalable-platforms-deployment-schema.json) | Normalized JSON Schema for a deployment across Vercel, Netlify, Heroku, Fly.io, Railway, and Render. |
+
+## Structures
+
+| Artifact | Description |
+|---|---|
+| [Platform Deployment Structure](json-structure/scalable-platforms-deployment-structure.json) | Hierarchical field documentation for cross-provider PaaS deployment objects. |
+
+## Linked Data
+
+| Artifact | Description |
+|---|---|
+| [Scalable Platforms Context](json-ld/scalable-platforms-context.jsonld) | JSON-LD context mapping platform deployment vocabulary to schema.org. |
+
+## Examples
+
+| Artifact | Description |
+|---|---|
+| [Platform Deployment Example](examples/scalable-platforms-deployment-example.json) | Example Vercel production deployment with serverless runtime, multi-region config, and scale-to-zero. |
+
+## Vocabulary
+
+| Artifact | Description |
+|---|---|
+| [Scalable Platforms Vocabulary](vocabulary/scalable-platforms-vocabulary.yml) | Normative vocabulary for PaaS, deployment models, serverless, edge computing, and developer experience concepts. |
 
 ## Maintainers
 
-**FN:** Scalable Platforms API Team
-
-**Email:** api-team@scalableplatforms.example.com
+**API Evangelist** — [kin@apievangelist.com](mailto:kin@apievangelist.com) — [https://apievangelist.com](https://apievangelist.com)

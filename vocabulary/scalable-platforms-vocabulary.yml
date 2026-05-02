@@ -1,0 +1,270 @@
+name: Scalable Platforms Vocabulary
+description: >-
+  Normative vocabulary for the scalable platforms topic domain, covering
+  Platform-as-a-Service (PaaS), developer experience platforms, deployment
+  models, serverless computing, edge computing, and the tools and concepts
+  that abstract infrastructure management for application teams.
+created: '2026-05-02'
+modified: '2026-05-02'
+tags:
+  - Deployment
+  - Developer Experience
+  - Edge Computing
+  - PaaS
+  - Platform
+  - Scalability
+  - Serverless
+
+terms:
+
+  - term: Platform-as-a-Service
+    definition: >-
+      A cloud computing model that provides a platform allowing customers to
+      develop, run, and manage applications without managing the underlying
+      infrastructure. PaaS providers handle OS, runtime, middleware, and
+      auto-scaling, letting developers focus on application code.
+    acronym: PaaS
+    fullName: Platform-as-a-Service
+    synonyms:
+      - PaaS
+      - Developer Platform
+      - App Platform
+    related:
+      - IaaS
+      - Serverless
+      - Heroku
+      - Railway
+      - Render
+      - Fly.io
+
+  - term: Atomic Deployment
+    definition: >-
+      A deployment strategy where an entire deployment is either fully applied
+      or fully rolled back—never partially live. Each deployment gets a unique
+      immutable URL. Netlify pioneered atomic deployments; Vercel and others
+      have adopted the pattern.
+    synonyms:
+      - Immutable Deployment
+    related:
+      - Instant Rollback
+      - Blue-Green Deployment
+
+  - term: Preview Deployment
+    definition: >-
+      An ephemeral deployment automatically created for each pull request or
+      branch, providing a unique URL to review changes before merging. Core
+      feature of Vercel, Netlify, Railway, and Render.
+    synonyms:
+      - Review App
+      - Branch Deploy
+    related:
+      - Atomic Deployment
+      - CI/CD
+
+  - term: Instant Rollback
+    definition: >-
+      The ability to immediately revert to any previous deployment state with
+      a single click or API call. Enabled by atomic/immutable deployments where
+      prior deployments are never deleted.
+    related:
+      - Atomic Deployment
+      - Preview Deployment
+
+  - term: Edge Function
+    definition: >-
+      A serverless function that runs at Points of Presence (PoPs) geographically
+      close to end users on a CDN/edge network. Provides ultra-low latency by
+      eliminating the round trip to a central origin server. Examples: Cloudflare
+      Workers, Vercel Edge Functions, Netlify Edge Functions.
+    synonyms:
+      - Edge Worker
+      - Cloudflare Worker
+    related:
+      - Serverless Function
+      - CDN
+      - Edge Computing
+
+  - term: Edge Computing
+    definition: >-
+      A distributed computing paradigm that brings computation and data storage
+      closer to the sources of data (users, IoT devices), reducing latency and
+      bandwidth usage. In the PaaS context, edge computing means running code at
+      CDN edge nodes worldwide.
+    related:
+      - Edge Function
+      - CDN
+      - Latency
+
+  - term: Serverless Function
+    definition: >-
+      A function that executes in a managed, stateless compute environment.
+      The platform handles provisioning, scaling, and deprovisioning. Billed
+      per execution rather than for idle time. Examples: AWS Lambda, Google
+      Cloud Functions, Vercel Serverless Functions.
+    synonyms:
+      - FaaS
+      - Lambda Function
+      - Cloud Function
+    related:
+      - Edge Function
+      - Scale-to-Zero
+
+  - term: Dyno
+    definition: >-
+      Heroku's term for a lightweight Linux container that runs application
+      processes. Dynos come in various types: web (HTTP traffic), worker
+      (background jobs), one-off (short-lived commands), and scheduler.
+    related:
+      - Container
+      - Heroku
+
+  - term: Build System
+    definition: >-
+      The component of a PaaS platform that detects the project type, installs
+      dependencies, compiles code, and produces deployment artifacts. Modern
+      build systems use layer caching to dramatically reduce build times.
+    related:
+      - CI/CD
+      - Atomic Deployment
+
+  - term: Zero-Downtime Deployment
+    definition: >-
+      A deployment strategy ensuring continuous availability during the update
+      process. Achieved through rolling updates, blue-green switching, or
+      platform-managed traffic shifting at the load balancer level.
+    synonyms:
+      - Rolling Deployment
+    related:
+      - Blue-Green Deployment
+      - Canary Release
+
+  - term: Blue-Green Deployment
+    definition: >-
+      A release strategy using two identical production environments (Blue and
+      Green). Traffic is switched from Blue to Green after the new version passes
+      validation. Instant rollback is achieved by switching traffic back to Blue.
+    related:
+      - Canary Release
+      - Zero-Downtime Deployment
+
+  - term: Canary Release
+    definition: >-
+      A technique for gradually rolling out changes to a subset of users before
+      full rollout. Traffic is split (e.g., 5% new, 95% old) to detect issues
+      with minimal user impact.
+    related:
+      - Blue-Green Deployment
+      - A/B Testing
+
+  - term: JAMstack
+    definition: >-
+      A web architecture based on JavaScript, APIs, and Markup. JAMstack sites
+      are pre-rendered at build time and served from CDN, with dynamic features
+      via APIs. Delivers excellent scalability, security, and performance.
+      Netlify and Vercel popularized JAMstack.
+    related:
+      - Static Site Generation
+      - CDN
+      - Serverless Function
+
+  - term: Static Site Generation
+    definition: >-
+      A technique where HTML pages are generated at build time rather than
+      per request. Pre-rendered pages can be served directly from CDN with
+      no server-side rendering latency.
+    acronym: SSG
+    fullName: Static Site Generation
+    related:
+      - JAMstack
+      - Next.js
+      - Atomic Deployment
+
+  - term: Server-Side Rendering
+    definition: >-
+      A rendering strategy where HTML is generated on the server per request,
+      then sent to the client. Provides fresh data and personalized content at
+      the cost of higher compute requirements than SSG.
+    acronym: SSR
+    fullName: Server-Side Rendering
+    related:
+      - Static Site Generation
+      - Edge Function
+
+  - term: Bring Your Own Cloud
+    definition: >-
+      A deployment model where a PaaS vendor manages the platform control plane
+      but deploys workloads into the customer's own cloud account (AWS, GCP,
+      Azure). Provides the developer experience of PaaS with the data sovereignty
+      and cost benefits of direct cloud billing.
+    acronym: BYOC
+    fullName: Bring Your Own Cloud
+    related:
+      - PaaS
+      - Cloud Provider
+
+  - term: Usage-Based Pricing
+    definition: >-
+      A billing model where customers pay only for the compute, bandwidth, and
+      storage they actually consume, with no minimum charge for idle resources.
+      Railway pioneered this model in the PaaS space; enables scale-to-zero cost efficiency.
+    synonyms:
+      - Pay-Per-Use
+      - Consumption-Based Pricing
+    related:
+      - Scale-to-Zero
+      - Railway
+
+  - term: Persistent Volume
+    definition: >-
+      Storage that survives container restarts and redeployments. Essential for
+      stateful applications deployed on containerized PaaS platforms. Fly.io,
+      Railway, and Render all offer persistent volume storage.
+    related:
+      - Container
+      - Database
+      - Stateful Application
+
+  - term: Cold Start
+    definition: >-
+      Latency incurred when a serverless function or scale-to-zero container
+      is invoked after a period of inactivity and must initialize a new runtime
+      environment. Mitigated by warm pools, minimum instances, or edge runtimes.
+    related:
+      - Serverless Function
+      - Scale-to-Zero
+      - Edge Function
+
+categories:
+  - name: Platform Models
+    terms:
+      - Platform-as-a-Service
+      - Bring Your Own Cloud
+      - Usage-Based Pricing
+
+  - name: Deployment Patterns
+    terms:
+      - Atomic Deployment
+      - Preview Deployment
+      - Instant Rollback
+      - Zero-Downtime Deployment
+      - Blue-Green Deployment
+      - Canary Release
+
+  - name: Execution Models
+    terms:
+      - Serverless Function
+      - Edge Function
+      - Edge Computing
+      - Cold Start
+      - Dyno
+
+  - name: Build and Release
+    terms:
+      - Build System
+      - JAMstack
+      - Static Site Generation
+      - Server-Side Rendering
+
+  - name: Storage
+    terms:
+      - Persistent Volume

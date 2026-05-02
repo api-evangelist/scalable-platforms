@@ -1,0 +1,63 @@
+{
+  "name": "Platform Deployment",
+  "description": "Hierarchical field structure for a normalized PaaS deployment across Vercel, Netlify, Heroku, Fly.io, Railway, and Render.",
+  "fields": [
+    {"name": "id", "type": "string", "description": "Unique deployment identifier.", "required": true},
+    {"name": "provider", "type": "string", "description": "PaaS platform: vercel, netlify, heroku, fly-io, railway, render, northflank.", "required": true},
+    {"name": "appId", "type": "string", "description": "Application/project ID this deployment belongs to.", "required": true},
+    {"name": "appName", "type": "string", "description": "Human-readable application name.", "required": false},
+    {"name": "environment", "type": "string", "description": "production, staging, preview, or development.", "required": false},
+    {"name": "status", "type": "string", "description": "queued, building, deploying, ready, failed, cancelled.", "required": true},
+    {"name": "url", "type": "string", "description": "Public URL for this deployment.", "required": false},
+    {
+      "name": "gitCommit",
+      "type": "object",
+      "description": "Source commit triggering the deployment.",
+      "required": false,
+      "fields": [
+        {"name": "sha", "type": "string", "description": "Full commit SHA hash."},
+        {"name": "branch", "type": "string", "description": "Branch name."},
+        {"name": "message", "type": "string", "description": "Commit message."},
+        {"name": "author", "type": "string", "description": "Committer name or email."}
+      ]
+    },
+    {
+      "name": "build",
+      "type": "object",
+      "description": "Build configuration and result.",
+      "required": false,
+      "fields": [
+        {"name": "command", "type": "string", "description": "Build command (e.g., npm run build)."},
+        {"name": "outputDirectory", "type": "string", "description": "Output directory (e.g., dist, .next)."},
+        {"name": "durationSeconds", "type": "number", "description": "Build duration in seconds."},
+        {"name": "logUrl", "type": "string", "description": "URL to build logs."}
+      ]
+    },
+    {
+      "name": "runtime",
+      "type": "object",
+      "description": "Runtime execution model and regional configuration.",
+      "required": false,
+      "fields": [
+        {"name": "type", "type": "string", "description": "static, serverless, server, edge, or container."},
+        {"name": "region", "type": "string", "description": "Primary region."},
+        {"name": "regions", "type": "array", "description": "All active regions."},
+        {"name": "memory", "type": "integer", "description": "Memory limit in MB."},
+        {"name": "timeout", "type": "integer", "description": "Execution timeout in seconds."}
+      ]
+    },
+    {
+      "name": "scaling",
+      "type": "object",
+      "description": "Platform-managed scaling settings.",
+      "required": false,
+      "fields": [
+        {"name": "minInstances", "type": "integer", "description": "Minimum replicas; 0 for scale-to-zero."},
+        {"name": "maxInstances", "type": "integer", "description": "Maximum replicas."},
+        {"name": "scaleToZero", "type": "boolean", "description": "Whether scale-to-zero is enabled."}
+      ]
+    },
+    {"name": "createdAt", "type": "string", "description": "ISO 8601 creation timestamp.", "required": false},
+    {"name": "readyAt", "type": "string", "description": "ISO 8601 ready timestamp.", "required": false}
+  ]
+}

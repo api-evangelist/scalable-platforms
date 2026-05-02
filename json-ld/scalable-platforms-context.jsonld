@@ -1,0 +1,61 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://schema.org/",
+    "plat": "https://raw.githubusercontent.com/api-evangelist/scalable-platforms/main/json-ld/scalable-platforms-context.jsonld#",
+
+    "PlatformDeployment": {
+      "@id": "plat:PlatformDeployment",
+      "@type": "@id",
+      "comment": "A deployment of an application on a PaaS platform."
+    },
+    "PaaSPlatform": {
+      "@id": "plat:PaaSPlatform",
+      "@type": "@id",
+      "comment": "A Platform-as-a-Service provider abstracting infrastructure management."
+    },
+    "EdgeFunction": {
+      "@id": "plat:EdgeFunction",
+      "@type": "@id",
+      "comment": "A serverless function running at the network edge close to users."
+    },
+    "BuildPipeline": {
+      "@id": "plat:BuildPipeline",
+      "@type": "@id",
+      "comment": "The CI/CD pipeline that compiles, tests, and deploys application code."
+    },
+    "ServerlessFunction": {
+      "@id": "plat:ServerlessFunction",
+      "@type": "@id",
+      "comment": "A function executed on-demand in a managed serverless runtime."
+    },
+    "PreviewDeployment": {
+      "@id": "plat:PreviewDeployment",
+      "@type": "@id",
+      "comment": "An ephemeral deployment created per pull request for review."
+    },
+
+    "id": "@id",
+    "name": "schema:name",
+    "description": "schema:description",
+    "provider": "plat:provider",
+    "appId": "plat:appId",
+    "appName": "schema:name",
+    "environment": "plat:environment",
+    "status": "schema:status",
+    "url": "schema:url",
+    "gitCommit": "plat:gitCommit",
+    "build": "plat:build",
+    "runtime": "plat:runtime",
+    "scaling": "plat:scaling",
+    "scaleToZero": "plat:scaleToZero",
+    "region": "plat:region",
+    "regions": {
+      "@id": "plat:regions",
+      "@container": "@list"
+    },
+    "createdAt": "schema:dateCreated",
+    "readyAt": "schema:dateModified",
+    "tags": "schema:keywords"
+  }
+}

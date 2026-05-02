@@ -1,0 +1,35 @@
+{
+  "id": "dpl_8Bx7mK4nWp2JqR6TvYfL3CsHgD9E",
+  "provider": "vercel",
+  "appId": "prj_ZxYwVuTsRqPoNmLkJiHgFeDcBa",
+  "appName": "storefront-app",
+  "environment": "production",
+  "status": "ready",
+  "url": "https://storefront-app.vercel.app",
+  "gitCommit": {
+    "sha": "a1b2c3d4e5f6789012345678901234567890abcd",
+    "branch": "main",
+    "message": "feat: add product recommendations carousel",
+    "author": "developer@example.com"
+  },
+  "build": {
+    "command": "npm run build",
+    "outputDirectory": ".next",
+    "durationSeconds": 42.7,
+    "logUrl": "https://vercel.com/example/storefront-app/deployments/dpl_8Bx7mK4nWp2JqR6TvYfL3CsHgD9E/logs"
+  },
+  "runtime": {
+    "type": "serverless",
+    "region": "iad1",
+    "regions": ["iad1", "sfo1", "fra1", "sin1"],
+    "memory": 1024,
+    "timeout": 10
+  },
+  "scaling": {
+    "minInstances": 0,
+    "maxInstances": 100,
+    "scaleToZero": true
+  },
+  "createdAt": "2026-05-01T14:32:10Z",
+  "readyAt": "2026-05-01T14:33:05Z"
+}

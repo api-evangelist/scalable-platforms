@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/scalable-platforms/main/json-schema/scalable-platforms-deployment-schema.json",
+  "title": "Platform Deployment",
+  "description": "A normalized schema for a deployment on a scalable PaaS platform such as Vercel, Netlify, Heroku, Fly.io, Railway, or Render.",
+  "type": "object",
+  "required": ["id", "provider", "appId", "status"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique deployment identifier assigned by the platform."
+    },
+    "provider": {
+      "type": "string",
+      "description": "PaaS platform provider.",
+      "enum": ["vercel", "netlify", "cloudflare-pages", "heroku", "fly-io", "railway", "render", "northflank"]
+    },
+    "appId": {
+      "type": "string",
+      "description": "ID of the application/project this deployment belongs to."
+    },
+    "appName": {
+      "type": "string",
+      "description": "Human-readable application name."
+    },
+    "environment": {
+      "type": "string",
+      "description": "Deployment environment.",
+      "enum": ["production", "staging", "preview", "development"],
+      "default": "preview"
+    },
+    "status": {
+      "type": "string",
+      "description": "Current deployment status.",
+      "enum": ["queued", "building", "deploying", "ready", "failed", "cancelled", "error"]
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Public URL for this deployment."
+    },
+    "gitCommit": {
+      "type": "object",
+      "description": "Source code commit triggering this deployment.",
+      "properties": {
+        "sha": {"type": "string", "description": "Full commit SHA."},
+        "branch": {"type": "string"},
+        "message": {"type": "string"},
+        "author": {"type": "string"}
+      }
+    },
+    "build": {
+      "type": "object",
+      "description": "Build configuration and outcome.",
+      "properties": {
+        "command": {"type": "string", "description": "Build command (e.g., npm run build)."},
+        "outputDirectory": {"type": "string", "description": "Build output directory (e.g., .next, dist, public)."},
+        "durationSeconds": {"type": "number", "description": "Total build duration."},
+        "logUrl": {"type": "string", "format": "uri", "description": "URL to build logs."}
+      }
+    },
+    "runtime": {
+      "type": "object",
+      "description": "Runtime configuration for the deployed application.",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["static", "serverless", "server", "edge", "container"],
+          "description": "Execution model."
+        },
+        "region": {
+          "type": "string",
+          "description": "Primary deployment region (e.g., iad1, fra1, us-east-1)."
+        },
+        "regions": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "All regions where the deployment is active."
+        },
+        "memory": {
+          "type": "integer",
+          "description": "Memory in MB for function/serverless deployments."
+        },
+        "timeout": {
+          "type": "integer",
+          "description": "Execution timeout in seconds."
+        }
+      }
+    },
+    "scaling": {
+      "type": "object",
+      "description": "Platform-managed scaling configuration.",
+      "properties": {
+        "minInstances": {"type": "integer", "minimum": 0, "description": "Minimum instances; 0 for scale-to-zero."},
+        "maxInstances": {"type": "integer", "minimum": 1},
+        "scaleToZero": {"type": "boolean", "default": false}
+      }
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "readyAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}
