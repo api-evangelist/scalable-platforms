@@ -1,0 +1,110 @@
+{
+  "name": "Serverless Function",
+  "description": "Hierarchical structure of a serverless function deployed on scalable PaaS platforms including Vercel, Netlify, Cloudflare Workers, Heroku, Fly.io, Railway, and Render.",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string",
+      "description": "Platform-assigned unique function identifier.",
+      "required": false
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "description": "Function name used in deployment and URL routing.",
+      "required": true
+    },
+    {
+      "name": "platform",
+      "type": "string",
+      "description": "Hosting platform (vercel, netlify, cloudflare-workers, heroku, fly-io, railway, render, northflank).",
+      "required": false
+    },
+    {
+      "name": "runtime",
+      "type": "string",
+      "description": "Execution runtime (nodejs18, nodejs20, python3.12, go1.21, deno, bun, edge-runtime, workerd).",
+      "required": true
+    },
+    {
+      "name": "handler",
+      "type": "string",
+      "description": "Entry point file path or exported function name.",
+      "required": true
+    },
+    {
+      "name": "route",
+      "type": "string",
+      "description": "URL path pattern that routes requests to this function.",
+      "required": false
+    },
+    {
+      "name": "region",
+      "type": "string",
+      "description": "Deployment region or 'edge' for global distribution.",
+      "required": false,
+      "default": "edge"
+    },
+    {
+      "name": "memoryMB",
+      "type": "integer",
+      "description": "Memory allocation in megabytes.",
+      "required": false,
+      "default": 256
+    },
+    {
+      "name": "timeoutSeconds",
+      "type": "integer",
+      "description": "Maximum execution time in seconds before termination.",
+      "required": false,
+      "default": 30
+    },
+    {
+      "name": "maxConcurrency",
+      "type": "integer",
+      "description": "Maximum concurrent function invocations.",
+      "required": false
+    },
+    {
+      "name": "scaleToZero",
+      "type": "boolean",
+      "description": "Whether the function scales to zero between invocations.",
+      "required": false,
+      "default": true
+    },
+    {
+      "name": "environment",
+      "type": "object",
+      "description": "Runtime environment variables.",
+      "required": false
+    },
+    {
+      "name": "triggers",
+      "type": "array",
+      "description": "Invocation triggers (http, cron, queue, event, webhook).",
+      "required": false,
+      "items": {
+        "type": "object",
+        "fields": [
+          {"name": "type", "type": "string", "description": "Trigger type (http, cron, queue, event, webhook).", "required": true},
+          {"name": "schedule", "type": "string", "description": "Cron schedule expression."},
+          {"name": "method", "type": "string", "description": "HTTP method (GET, POST, PUT, PATCH, DELETE, ANY)."}
+        ]
+      }
+    },
+    {
+      "name": "deployedAt",
+      "type": "string",
+      "description": "Timestamp of the most recent deployment.",
+      "required": false,
+      "format": "date-time"
+    },
+    {
+      "name": "status",
+      "type": "string",
+      "description": "Current function status (active, deploying, failed, paused).",
+      "required": false,
+      "default": "active"
+    }
+  ]
+}

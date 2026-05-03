@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/scalable-platforms/main/json-schema/scalable-platforms-serverless-function-schema.json",
+  "title": "Serverless Function",
+  "description": "Describes a serverless function (edge function, cloud function, or worker) deployed on scalable platforms such as Vercel Edge Functions, Netlify Functions, Cloudflare Workers, Heroku Functions, Fly.io Machines, or Railway services.",
+  "type": "object",
+  "required": ["name", "runtime", "handler"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Platform-assigned unique identifier for the function."
+    },
+    "name": {
+      "type": "string",
+      "description": "Function name used in deployment and routing.",
+      "pattern": "^[a-z][a-z0-9-_]*$",
+      "minLength": 1,
+      "maxLength": 64
+    },
+    "platform": {
+      "type": "string",
+      "description": "Platform hosting the serverless function.",
+      "enum": ["vercel", "netlify", "cloudflare-workers", "heroku", "fly-io", "railway", "render", "northflank"]
+    },
+    "runtime": {
+      "type": "string",
+      "description": "Runtime environment for the function.",
+      "enum": [
+        "nodejs18",
+        "nodejs20",
+        "nodejs22",
+        "python3.11",
+        "python3.12",
+        "go1.21",
+        "ruby3.3",
+        "deno",
+        "bun",
+        "edge-runtime",
+        "workerd"
+      ]
+    },
+    "handler": {
+      "type": "string",
+      "description": "Entry point file and exported function (e.g., api/hello.js for Next.js API routes).",
+      "example": "api/hello.js"
+    },
+    "route": {
+      "type": "string",
+      "description": "URL path pattern this function handles.",
+      "example": "/api/hello"
+    },
+    "region": {
+      "type": "string",
+      "description": "Deployment region or 'edge' for globally distributed execution.",
+      "examples": ["us-east-1", "eu-west-1", "edge", "global"],
+      "default": "edge"
+    },
+    "memoryMB": {
+      "type": "integer",
+      "description": "Memory allocated to the function in megabytes.",
+      "minimum": 128,
+      "maximum": 3008,
+      "default": 256
+    },
+    "timeoutSeconds": {
+      "type": "integer",
+      "description": "Maximum execution duration before the function is terminated.",
+      "minimum": 1,
+      "maximum": 900,
+      "default": 30
+    },
+    "maxConcurrency": {
+      "type": "integer",
+      "description": "Maximum concurrent executions (platform-specific).",
+      "minimum": 1
+    },
+    "scaleToZero": {
+      "type": "boolean",
+      "description": "Whether the function scales to zero when not in use.",
+      "default": true
+    },
+    "environment": {
+      "type": "object",
+      "description": "Environment variables available to the function at runtime.",
+      "additionalProperties": {"type": "string"}
+    },
+    "triggers": {
+      "type": "array",
+      "description": "Events that invoke this function.",
+      "items": {
+        "type": "object",
+        "required": ["type"],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["http", "cron", "queue", "event", "webhook"]
+          },
+          "schedule": {
+            "type": "string",
+            "description": "Cron schedule expression (for cron triggers).",
+            "example": "0 */6 * * *"
+          },
+          "method": {
+            "type": "string",
+            "enum": ["GET", "POST", "PUT", "PATCH", "DELETE", "ANY"],
+            "description": "HTTP method (for http triggers)."
+          }
+        }
+      }
+    },
+    "deployedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Deployment timestamp."
+    },
+    "status": {
+      "type": "string",
+      "description": "Current function status.",
+      "enum": ["active", "deploying", "failed", "paused"],
+      "default": "active"
+    }
+  }
+}

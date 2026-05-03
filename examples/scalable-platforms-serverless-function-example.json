@@ -1,0 +1,27 @@
+{
+  "id": "fn_9KxYm3nQpR7vWaEd",
+  "name": "product-recommendations",
+  "platform": "vercel",
+  "runtime": "nodejs20",
+  "handler": "api/recommendations.js",
+  "route": "/api/recommendations",
+  "region": "edge",
+  "memoryMB": 512,
+  "timeoutSeconds": 10,
+  "maxConcurrency": 1000,
+  "scaleToZero": true,
+  "environment": {
+    "NODE_ENV": "production",
+    "API_BASE_URL": "https://api.example.com",
+    "CACHE_TTL_SECONDS": "300",
+    "RECOMMENDATIONS_ENDPOINT": "/v1/recommendations"
+  },
+  "triggers": [
+    {
+      "type": "http",
+      "method": "GET"
+    }
+  ],
+  "deployedAt": "2026-05-02T08:00:00Z",
+  "status": "active"
+}

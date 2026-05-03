@@ -289,6 +289,14 @@ common:
     url: https://thesoftwarescout.com/heroku-vs-railway-vs-render-vs-fly-io-2026-which-platform-should-you-deploy-on/
   - type: PaaS Alternatives
     url: https://northflank.com/blog/best-cloud-hosting-platforms
+  - type: JSONSchema
+    url: https://raw.githubusercontent.com/api-evangelist/scalable-platforms/main/json-schema/scalable-platforms-deployment-schema.json
+  - type: JSONSchema
+    url: https://raw.githubusercontent.com/api-evangelist/scalable-platforms/main/json-schema/scalable-platforms-serverless-function-schema.json
+  - type: JSONLd
+    url: https://raw.githubusercontent.com/api-evangelist/scalable-platforms/main/json-ld/scalable-platforms-context.jsonld
+  - type: Vocabulary
+    url: https://raw.githubusercontent.com/api-evangelist/scalable-platforms/main/vocabulary/scalable-platforms-vocabulary.yml
 
 maintainers:
   - FN: API Evangelist

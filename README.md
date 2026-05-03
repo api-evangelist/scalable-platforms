@@ -148,12 +148,14 @@ BYOC, CI/CD, Containers, Deployment, Kubernetes, Managed Databases, Northflank, 
 | Artifact | Description |
 |---|---|
 | [Platform Deployment Schema](json-schema/scalable-platforms-deployment-schema.json) | Normalized JSON Schema for a deployment across Vercel, Netlify, Heroku, Fly.io, Railway, and Render. |
+| [Serverless Function Schema](json-schema/scalable-platforms-serverless-function-schema.json) | JSON Schema for serverless edge functions across Vercel, Netlify, Cloudflare Workers, and other platforms, covering runtime, triggers, and scaling config. |
 
 ## Structures
 
 | Artifact | Description |
 |---|---|
 | [Platform Deployment Structure](json-structure/scalable-platforms-deployment-structure.json) | Hierarchical field documentation for cross-provider PaaS deployment objects. |
+| [Serverless Function Structure](json-structure/scalable-platforms-serverless-function-structure.json) | Hierarchical field documentation for serverless functions including triggers, runtime, region, and scale-to-zero configuration. |
 
 ## Linked Data
 
@@ -166,12 +168,18 @@ BYOC, CI/CD, Containers, Deployment, Kubernetes, Managed Databases, Northflank, 
 | Artifact | Description |
 |---|---|
 | [Platform Deployment Example](examples/scalable-platforms-deployment-example.json) | Example Vercel production deployment with serverless runtime, multi-region config, and scale-to-zero. |
+| [Serverless Function Example](examples/scalable-platforms-serverless-function-example.json) | Example Vercel edge function for product recommendations with Node.js 20, HTTP trigger, and 512MB memory allocation. |
 
 ## Vocabulary
 
 | Artifact | Description |
 |---|---|
 | [Scalable Platforms Vocabulary](vocabulary/scalable-platforms-vocabulary.yml) | Normative vocabulary for PaaS, deployment models, serverless, edge computing, and developer experience concepts. |
+
+## Common Properties
+
+- [Developer Experience Comparison](https://thesoftwarescout.com/heroku-vs-railway-vs-render-vs-fly-io-2026-which-platform-should-you-deploy-on/)
+- [PaaS Alternatives](https://northflank.com/blog/best-cloud-hosting-platforms)
 
 ## Maintainers
 
