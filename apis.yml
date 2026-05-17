@@ -44,7 +44,7 @@ apis:
         url: https://vercel.com/docs/rest-api
       - type: OpenAPI
         url: https://openapi.vercel.sh/
-      - type: Getting Started
+      - type: GettingStarted
         url: https://vercel.com/docs
       - type: Pricing
         url: https://vercel.com/pricing
@@ -78,7 +78,7 @@ apis:
         url: https://docs.netlify.com/api/get-started/
       - type: OpenAPI
         url: https://open-api.netlify.com/
-      - type: Getting Started
+      - type: GettingStarted
         url: https://docs.netlify.com/
       - type: Pricing
         url: https://www.netlify.com/pricing/
@@ -112,7 +112,7 @@ apis:
         url: https://developers.cloudflare.com/api/
       - type: OpenAPI
         url: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.yaml
-      - type: Getting Started
+      - type: GettingStarted
         url: https://developers.cloudflare.com/
       - type: Pricing
         url: https://www.cloudflare.com/plans/
@@ -145,7 +145,7 @@ apis:
         url: https://devcenter.heroku.com/articles/platform-api-reference
       - type: OpenAPI
         url: https://devcenter.heroku.com/api-docs
-      - type: Getting Started
+      - type: GettingStarted
         url: https://devcenter.heroku.com/start
       - type: Pricing
         url: https://www.heroku.com/pricing
@@ -176,7 +176,7 @@ apis:
         url: https://fly.io/docs/machines/api/
       - type: OpenAPI
         url: https://raw.githubusercontent.com/superfly/fly-openapi/refs/heads/main/openapi.yaml
-      - type: Getting Started
+      - type: GettingStarted
         url: https://fly.io/docs/getting-started/
       - type: Pricing
         url: https://fly.io/docs/about/pricing/
@@ -208,7 +208,7 @@ apis:
     properties:
       - type: Documentation
         url: https://docs.railway.app/reference/public-api
-      - type: Getting Started
+      - type: GettingStarted
         url: https://docs.railway.app/
       - type: Pricing
         url: https://railway.app/pricing
@@ -241,7 +241,7 @@ apis:
         url: https://api-docs.render.com/reference/
       - type: OpenAPI
         url: https://raw.githubusercontent.com/renderinc/openapi-specs/main/openapi.yaml
-      - type: Getting Started
+      - type: GettingStarted
         url: https://render.com/docs/
       - type: Pricing
         url: https://render.com/pricing
@@ -274,7 +274,7 @@ apis:
         url: https://northflank.com/docs/v1/api/overview
       - type: OpenAPI
         url: https://api.northflank.com/v1/openapi.json
-      - type: Getting Started
+      - type: GettingStarted
         url: https://northflank.com/docs/
       - type: Pricing
         url: https://northflank.com/pricing
@@ -293,7 +293,7 @@ common:
     url: https://raw.githubusercontent.com/api-evangelist/scalable-platforms/main/json-schema/scalable-platforms-deployment-schema.json
   - type: JSONSchema
     url: https://raw.githubusercontent.com/api-evangelist/scalable-platforms/main/json-schema/scalable-platforms-serverless-function-schema.json
-  - type: JSONLd
+  - type: JSONLD
     url: https://raw.githubusercontent.com/api-evangelist/scalable-platforms/main/json-ld/scalable-platforms-context.jsonld
   - type: Vocabulary
     url: https://raw.githubusercontent.com/api-evangelist/scalable-platforms/main/vocabulary/scalable-platforms-vocabulary.yml
