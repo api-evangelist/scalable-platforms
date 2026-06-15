@@ -1,12 +1,19 @@
-# Scalable Platforms
+# Scalable Platforms (scalable-platforms)
 
-A subject-matter collection covering APIs, tools, and platforms for building and deploying scalable applications. This topic encompasses Platform-as-a-Service (PaaS) providers, developer experience platforms, deployment automation, serverless computing, container platforms, and edge computing tools. Covers Vercel, Netlify, Cloudflare, Heroku, Fly.io, Railway, Render, and Northflank.
+A subject-matter collection covering APIs, tools, and platforms for building and deploying scalable platform infrastructure. This topic encompasses Platform-as-a-Service (PaaS) providers, developer experience platforms, deployment automation, serverless computing, container platforms, and the tools that abstract infrastructure management so teams can focus on application delivery. Covers Railway, Render, Fly.io, Heroku, Vercel, Netlify, and Cloudflare Workers.
 
-**URL:** [https://raw.githubusercontent.com/api-evangelist/scalable-platforms/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/scalable-platforms/refs/heads/main/apis.yml)
+**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/scalable-platforms/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/scalable-platforms/refs/heads/main/apis.yml)
 
 ## Tags
 
-Cloud Infrastructure, Deployment, Developer Experience, DevOps, PaaS, Platform, Scalability, Serverless
+- Cloud Infrastructure
+- Deployment
+- Developer Experience
+- DevOps
+- PaaS
+- Platform
+- Scalability
+- Serverless
 
 ## Timestamps
 
@@ -16,171 +23,201 @@ Cloud Infrastructure, Deployment, Developer Experience, DevOps, PaaS, Platform, 
 ## APIs
 
 ### Vercel REST API
-Frontend cloud platform for Next.js and JavaScript frameworks with global edge network, automatic scaling, and zero-config deployments.
 
-**Human URL:** [https://vercel.com/](https://vercel.com/)
+Vercel is the frontend cloud platform for deploying Next.js, React, and other JavaScript frameworks with zero configuration. The Vercel REST API manages deployments, projects, domains, environment variables, edge functions, and team access. Provides global edge network with automatic scaling.
 
 #### Tags
 
-CDN, Deployment, Edge Computing, Frontend, Next.js, Serverless, Vercel
+- CDN
+- Deployment
+- Edge Computing
+- Frontend
+- Next.js
+- Serverless
+- Vercel
 
 #### Properties
 
 - [Documentation](https://vercel.com/docs/rest-api)
-- [OpenAPI](https://openapi.vercel.sh/)
+- [OpenAPI](https://openapi.vercel.sh/) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
 - [Getting Started](https://vercel.com/docs)
 - [Pricing](https://vercel.com/pricing)
 - [SDK](https://github.com/vercel/sdk)
+- [Postman Collection](collections/scalable-platforms.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/scalable-platforms.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
 
 ### Netlify API
-Web platform for JAMstack applications with atomic deployments, instant rollbacks, serverless functions, and edge functions.
 
-**Human URL:** [https://www.netlify.com/](https://www.netlify.com/)
+Netlify is a web platform for building, deploying, and serving modern web projects. The Netlify API manages sites, deploys, environment variables, build hooks, functions, forms, identity, and DNS records. Features atomic deploys and instant rollbacks.
 
 #### Tags
 
-CDN, CI/CD, Deployment, Frontend, JAMstack, Netlify, Serverless
+- CDN
+- CI/CD
+- Deployment
+- Frontend
+- JAMstack
+- Netlify
+- Serverless
 
 #### Properties
 
 - [Documentation](https://docs.netlify.com/api/get-started/)
-- [OpenAPI](https://open-api.netlify.com/)
+- [OpenAPI](https://open-api.netlify.com/) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
 - [Getting Started](https://docs.netlify.com/)
 - [Pricing](https://www.netlify.com/pricing/)
+- [SDK](https://github.com/netlify/js-client)
+- [Postman Collection](collections/scalable-platforms.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/scalable-platforms.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
 
 ### Cloudflare API
-Global edge platform managing DNS, CDN, Workers (edge functions), Pages, R2 storage, D1 database, and DDoS protection.
 
-**Human URL:** [https://www.cloudflare.com/](https://www.cloudflare.com/)
+Cloudflare's platform API manages DNS, CDN, Firewall rules, Workers (serverless edge functions), Pages (JAMstack deployments), R2 (object storage), D1 (serverless SQLite), KV, and Durable Objects. Powers globally distributed scalable applications at the edge.
 
 #### Tags
 
-CDN, Cloudflare, DNS, Edge Computing, Security, Serverless, Workers
+- CDN
+- Cloudflare
+- DNS
+- Edge Computing
+- Security
+- Serverless
+- Workers
 
 #### Properties
 
 - [Documentation](https://developers.cloudflare.com/api/)
-- [OpenAPI](https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.yaml)
+- [OpenAPI](https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.yaml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
 - [Getting Started](https://developers.cloudflare.com/)
 - [Pricing](https://www.cloudflare.com/plans/)
 - [SDK](https://github.com/cloudflare/cloudflare-typescript)
+- [Postman Collection](collections/scalable-platforms.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/scalable-platforms.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
 
 ### Heroku Platform API
-Pioneer "git push" PaaS managing apps, dynos, add-ons, pipelines, and private spaces; owned by Salesforce.
 
-**Human URL:** [https://www.heroku.com/](https://www.heroku.com/)
+Heroku pioneered the "git push" deployment model and remains a leading PaaS for rapid application deployment. The Heroku Platform API manages apps, dynos, config vars, add-ons, pipelines, review apps, spaces (private networking), and team access. Owned by Salesforce.
 
 #### Tags
 
-Deployment, Dynos, Heroku, PaaS, Pipelines, Salesforce
+- Deployment
+- Dynos
+- Heroku
+- PaaS
+- Pipelines
+- Salesforce
 
 #### Properties
 
 - [Documentation](https://devcenter.heroku.com/articles/platform-api-reference)
-- [OpenAPI](https://devcenter.heroku.com/api-docs)
+- [OpenAPI](https://devcenter.heroku.com/api-docs) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+- [Getting Started](https://devcenter.heroku.com/start)
 - [Pricing](https://www.heroku.com/pricing)
+- [Postman Collection](collections/scalable-platforms.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/scalable-platforms.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
 
 ### Fly.io Machines API
-Deploy Docker containers globally at the edge with Machines API; supports managed Postgres, GPU instances, Kubernetes, object storage, and scale-to-zero.
 
-**Human URL:** [https://fly.io/](https://fly.io/)
+Fly.io deploys Docker containers globally on its own hardware, with low-latency routing to the nearest region. The Machines API manages apps, machines (VMs), volumes, networks, secrets, and certificates. In 2026, Fly.io supports managed Postgres, GPU instances, Kubernetes, object storage, and scale-to-zero.
 
 #### Tags
 
-Containers, Deployment, Edge Computing, Fly.io, Global Deployment, Scale To Zero
+- Containers
+- Deployment
+- Edge Computing
+- Fly.io
+- Global Deployment
+- Scale To Zero
 
 #### Properties
 
 - [Documentation](https://fly.io/docs/machines/api/)
-- [OpenAPI](https://raw.githubusercontent.com/superfly/fly-openapi/refs/heads/main/openapi.yaml)
+- [OpenAPI](https://raw.githubusercontent.com/superfly/fly-openapi/refs/heads/main/openapi.yaml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
 - [Getting Started](https://fly.io/docs/getting-started/)
 - [Pricing](https://fly.io/docs/about/pricing/)
+- [SDK](https://github.com/superfly/fly-go)
+- [Postman Collection](collections/scalable-platforms.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/scalable-platforms.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
 
 ### Railway API
-Modern deployment platform with usage-based pricing, excellent developer experience, persistent volumes, private networking, and one-click databases.
 
-**Human URL:** [https://railway.app/](https://railway.app/)
+Railway is a modern deployment platform with usage-based pricing and arguably the best developer experience of any deployment platform. Launched in 2020, by 2026 it has matured with support for persistent volumes, private networking, cron jobs, TCP proxy, and one-click database deployments. The API manages projects, services, deployments, environments, and variables.
 
 #### Tags
 
-Containers, Deployment, Developer Experience, PaaS, Railway, Usage-Based Pricing
+- Containers
+- Deployment
+- Developer Experience
+- PaaS
+- Railway
+- Usage-Based Pricing
 
 #### Properties
 
 - [Documentation](https://docs.railway.app/reference/public-api)
 - [Getting Started](https://docs.railway.app/)
 - [Pricing](https://railway.app/pricing)
+- [SDK](https://github.com/railwayapp/cli)
+- [Postman Collection](collections/scalable-platforms.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/scalable-platforms.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
 
 ### Render API
-Modern Heroku alternative with free tier, managed databases, background workers, cron jobs, auto-scaling, and private networking.
 
-**Human URL:** [https://render.com/](https://render.com/)
+Render positioned itself as the modern Heroku with a free tier, managed databases, background workers, cron jobs, and static sites. The Render API manages services, deploys, environment groups, and custom domains. By 2026, Render supports auto-scaling, private networking, and managed Redis.
 
 #### Tags
 
-Containers, Deployment, Managed Databases, PaaS, Render, Serverless
+- Containers
+- Deployment
+- Managed Databases
+- PaaS
+- Render
+- Serverless
 
 #### Properties
 
 - [Documentation](https://api-docs.render.com/reference/)
-- [OpenAPI](https://raw.githubusercontent.com/renderinc/openapi-specs/main/openapi.yaml)
+- [OpenAPI](https://raw.githubusercontent.com/renderinc/openapi-specs/main/openapi.yaml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
 - [Getting Started](https://render.com/docs/)
 - [Pricing](https://render.com/pricing)
+- [Postman Collection](collections/scalable-platforms.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/scalable-platforms.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
 
 ### Northflank API
-DevOps platform with container deployments, managed databases, jobs, preview environments, full Kubernetes backend, and BYOC support.
 
-**Human URL:** [https://northflank.com/](https://northflank.com/)
+Northflank is a DevOps platform providing container deployment, managed databases, job scheduling, preview environments, and full Kubernetes-based infrastructure. The Northflank API manages projects, services, databases, secrets, and pipelines. Supports BYOC (Bring Your Own Cloud) for running on AWS, GCP, or Azure.
 
 #### Tags
 
-BYOC, CI/CD, Containers, Deployment, Kubernetes, Managed Databases, Northflank, PaaS
+- BYOC
+- CI/CD
+- Containers
+- Deployment
+- Kubernetes
+- Managed Databases
+- Northflank
+- PaaS
 
 #### Properties
 
 - [Documentation](https://northflank.com/docs/v1/api/overview)
-- [OpenAPI](https://api.northflank.com/v1/openapi.json)
+- [OpenAPI](https://api.northflank.com/v1/openapi.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
 - [Getting Started](https://northflank.com/docs/)
 - [Pricing](https://northflank.com/pricing)
-
-## Schemas
-
-| Artifact | Description |
-|---|---|
-| [Platform Deployment Schema](json-schema/scalable-platforms-deployment-schema.json) | Normalized JSON Schema for a deployment across Vercel, Netlify, Heroku, Fly.io, Railway, and Render. |
-| [Serverless Function Schema](json-schema/scalable-platforms-serverless-function-schema.json) | JSON Schema for serverless edge functions across Vercel, Netlify, Cloudflare Workers, and other platforms, covering runtime, triggers, and scaling config. |
-
-## Structures
-
-| Artifact | Description |
-|---|---|
-| [Platform Deployment Structure](json-structure/scalable-platforms-deployment-structure.json) | Hierarchical field documentation for cross-provider PaaS deployment objects. |
-| [Serverless Function Structure](json-structure/scalable-platforms-serverless-function-structure.json) | Hierarchical field documentation for serverless functions including triggers, runtime, region, and scale-to-zero configuration. |
-
-## Linked Data
-
-| Artifact | Description |
-|---|---|
-| [Scalable Platforms Context](json-ld/scalable-platforms-context.jsonld) | JSON-LD context mapping platform deployment vocabulary to schema.org. |
-
-## Examples
-
-| Artifact | Description |
-|---|---|
-| [Platform Deployment Example](examples/scalable-platforms-deployment-example.json) | Example Vercel production deployment with serverless runtime, multi-region config, and scale-to-zero. |
-| [Serverless Function Example](examples/scalable-platforms-serverless-function-example.json) | Example Vercel edge function for product recommendations with Node.js 20, HTTP trigger, and 512MB memory allocation. |
-
-## Vocabulary
-
-| Artifact | Description |
-|---|---|
-| [Scalable Platforms Vocabulary](vocabulary/scalable-platforms-vocabulary.yml) | Normative vocabulary for PaaS, deployment models, serverless, edge computing, and developer experience concepts. |
+- [Postman Collection](collections/scalable-platforms.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/scalable-platforms.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
 
 ## Common Properties
 
-- [Developer Experience Comparison](https://thesoftwarescout.com/heroku-vs-railway-vs-render-vs-fly-io-2026-which-platform-should-you-deploy-on/)
-- [PaaS Alternatives](https://northflank.com/blog/best-cloud-hosting-platforms)
+- [Developer  Experience  Comparison](https://thesoftwarescout.com/heroku-vs-railway-vs-render-vs-fly-io-2026-which-platform-should-you-deploy-on/)
+- [Paa S  Alternatives](https://northflank.com/blog/best-cloud-hosting-platforms)
+- [JSON Schema](https://raw.githubusercontent.com/api-evangelist/scalable-platforms/main/json-schema/scalable-platforms-deployment-schema.json) — [JSON Schema](https://json-schema.org/specification)
+- [JSON Schema](https://raw.githubusercontent.com/api-evangelist/scalable-platforms/main/json-schema/scalable-platforms-serverless-function-schema.json) — [JSON Schema](https://json-schema.org/specification)
+- [JSON-LD](https://raw.githubusercontent.com/api-evangelist/scalable-platforms/main/json-ld/scalable-platforms-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
+- [Vocabulary](https://raw.githubusercontent.com/api-evangelist/scalable-platforms/main/vocabulary/scalable-platforms-vocabulary.yml)
 
 ## Maintainers
 
-**API Evangelist** — [kin@apievangelist.com](mailto:kin@apievangelist.com) — [https://apievangelist.com](https://apievangelist.com)
+**FN:** API Evangelist
+**Email:** kin@apievangelist.com
+**URL:** https://apievangelist.com

@@ -1,0 +1,279 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Vercel REST API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Deployments",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List deployments",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.vercel.com/v6/deployments"
+          },
+          "docs": "List deployments"
+        },
+        {
+          "info": {
+            "name": "Create a new deployment",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.vercel.com/v13/deployments",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a new deployment"
+        },
+        {
+          "info": {
+            "name": "Get a deployment by ID or URL",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.vercel.com/v13/deployments/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a deployment by ID or URL"
+        },
+        {
+          "info": {
+            "name": "Delete a deployment",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.vercel.com/v13/deployments/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a deployment"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Projects",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List projects",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.vercel.com/v9/projects"
+          },
+          "docs": "List projects"
+        },
+        {
+          "info": {
+            "name": "Create a project",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.vercel.com/v9/projects",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a project"
+        },
+        {
+          "info": {
+            "name": "Pause a project",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.vercel.com/v1/projects/:projectId/pause",
+            "params": [
+              {
+                "name": "projectId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Pause a project"
+        },
+        {
+          "info": {
+            "name": "Unpause a project",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.vercel.com/v1/projects/:projectId/unpause",
+            "params": [
+              {
+                "name": "projectId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Unpause a project"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Environments",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve custom environments",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.vercel.com/v9/projects/:idOrName/customenvironments",
+            "params": [
+              {
+                "name": "idOrName",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve custom environments"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Domains",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all the domains",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.vercel.com/v5/domains"
+          },
+          "docs": "List all the domains"
+        },
+        {
+          "info": {
+            "name": "Add an existing domain to the Vercel platform",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.vercel.com/v5/domains",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Add an existing domain to the Vercel platform"
+        },
+        {
+          "info": {
+            "name": "Get a domain's configuration",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.vercel.com/v6/domains/:domain/config",
+            "params": [
+              {
+                "name": "domain",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a domain's configuration"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Artifacts",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Upload a cache artifact",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.vercel.com/v8/artifacts/:hash",
+            "params": [
+              {
+                "name": "hash",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Upload a cache artifact"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Teams",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List teams",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.vercel.com/v2/teams"
+          },
+          "docs": "List teams"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
