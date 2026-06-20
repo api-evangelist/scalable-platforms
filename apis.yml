@@ -6,7 +6,7 @@ description: >-
   computing, container platforms, and the tools that abstract infrastructure management
   so teams can focus on application delivery. Covers Railway, Render, Fly.io, Heroku,
   Vercel, Netlify, and Cloudflare Workers.
-image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/scalable-platforms/refs/heads/main/apis.yml
 created: '2024-01-15'
 modified: '2026-05-02'
