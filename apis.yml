@@ -48,7 +48,7 @@ apis:
     url: https://vercel.com/docs
   - type: Pricing
     url: https://vercel.com/pricing
-  - type: SDK
+  - type: SDKs
     url: https://github.com/vercel/sdk
   - url: graphql/scalable-platforms-graphql.md
     type: GraphQL
@@ -84,7 +84,7 @@ apis:
     url: https://docs.netlify.com/
   - type: Pricing
     url: https://www.netlify.com/pricing/
-  - type: SDK
+  - type: SDKs
     url: https://github.com/netlify/js-client
   contact:
   - type: Community
@@ -118,7 +118,7 @@ apis:
     url: https://developers.cloudflare.com/
   - type: Pricing
     url: https://www.cloudflare.com/plans/
-  - type: SDK
+  - type: SDKs
     url: https://github.com/cloudflare/cloudflare-typescript
   contact:
   - type: Community
@@ -182,7 +182,7 @@ apis:
     url: https://fly.io/docs/getting-started/
   - type: Pricing
     url: https://fly.io/docs/about/pricing/
-  - type: SDK
+  - type: SDKs
     url: https://github.com/superfly/fly-go
   contact:
   - type: Community
@@ -214,7 +214,7 @@ apis:
     url: https://docs.railway.app/
   - type: Pricing
     url: https://railway.app/pricing
-  - type: SDK
+  - type: SDKs
     url: https://github.com/railwayapp/cli
   contact:
   - type: Community
