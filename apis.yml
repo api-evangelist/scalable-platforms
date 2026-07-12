@@ -287,6 +287,10 @@ apis:
     url: https://github.com/northflank
 
 common:
+- type: DomainSecurity
+  url: security/scalable-platforms-domain-security.yml
+- type: Authentication
+  url: authentication/scalable-platforms-authentication.yml
 - type: Developer Experience Comparison
   url: https://thesoftwarescout.com/heroku-vs-railway-vs-render-vs-fly-io-2026-which-platform-should-you-deploy-on/
 - type: PaaS Alternatives
