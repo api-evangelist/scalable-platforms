@@ -287,6 +287,8 @@ apis:
     url: https://github.com/northflank
 
 common:
+- type: AgenticAccess
+  url: agentic-access/scalable-platforms-agentic-access.yml
 - type: DomainSecurity
   url: security/scalable-platforms-domain-security.yml
 - type: Authentication
