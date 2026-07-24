@@ -1,0 +1,77 @@
+openapi: 3.1.0
+info:
+  title: Vercel REST Artifacts Domains API
+  description: 'The Vercel REST API provides programmatic control of Vercel projects,
+
+    deployments, domains, teams, and environment variables. The base URL is
+
+    https://api.vercel.com and authentication uses a bearer token (personal
+
+    or team access token). A full OpenAPI specification is published at
+
+    https://openapi.vercel.sh/. This file is an API Evangelist research
+
+    artifact for the scalable-platforms topic and captures a representative
+
+    subset of endpoints.
+
+    '
+  version: 1.0.0
+  contact:
+    name: API Evangelist
+    url: https://apievangelist.com
+servers:
+- url: https://api.vercel.com
+  description: Vercel production API
+security:
+- BearerAuth: []
+tags:
+- name: Domains
+paths:
+  /v5/domains:
+    get:
+      summary: List all the domains
+      operationId: listDomains
+      tags:
+      - Domains
+      responses:
+        '200':
+          description: Domains list.
+    post:
+      summary: Add an existing domain to the Vercel platform
+      operationId: addDomain
+      tags:
+      - Domains
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+      responses:
+        '200':
+          description: Domain added.
+  /v6/domains/{domain}/config:
+    get:
+      summary: Get a domain's configuration
+      operationId: getDomainConfig
+      tags:
+      - Domains
+      parameters:
+      - name: domain
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Domain configuration.
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: VercelToken
