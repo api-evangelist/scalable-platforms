@@ -1,0 +1,208 @@
+openapi: 3.1.0
+info:
+  title: Vercel REST API
+  description: |
+    The Vercel REST API provides programmatic control of Vercel projects,
+    deployments, domains, teams, and environment variables. The base URL is
+    https://api.vercel.com and authentication uses a bearer token (personal
+    or team access token). A full OpenAPI specification is published at
+    https://openapi.vercel.sh/. This file is an API Evangelist research
+    artifact for the scalable-platforms topic and captures a representative
+    subset of endpoints.
+  version: "1.0.0"
+  contact:
+    name: API Evangelist
+    url: https://apievangelist.com
+servers:
+  - url: https://api.vercel.com
+    description: Vercel production API
+security:
+  - BearerAuth: []
+paths:
+  /v6/deployments:
+    get:
+      summary: List deployments
+      operationId: listDeployments
+      tags: [Deployments]
+      responses:
+        '200':
+          description: A page of deployments.
+  /v13/deployments:
+    post:
+      summary: Create a new deployment
+      operationId: createDeployment
+      tags: [Deployments]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                project:
+                  type: string
+      responses:
+        '200':
+          description: Deployment created.
+  /v13/deployments/{id}:
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Get a deployment by ID or URL
+      operationId: getDeployment
+      tags: [Deployments]
+      responses:
+        '200':
+          description: A single deployment.
+    delete:
+      summary: Delete a deployment
+      operationId: deleteDeployment
+      tags: [Deployments]
+      responses:
+        '200':
+          description: Deletion accepted.
+  /v9/projects:
+    get:
+      summary: List projects
+      operationId: listProjects
+      tags: [Projects]
+      responses:
+        '200':
+          description: A page of projects.
+    post:
+      summary: Create a project
+      operationId: createProject
+      tags: [Projects]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+      responses:
+        '200':
+          description: Project created.
+  /v1/projects/{projectId}/pause:
+    post:
+      summary: Pause a project
+      operationId: pauseProject
+      tags: [Projects]
+      parameters:
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Project paused.
+  /v1/projects/{projectId}/unpause:
+    post:
+      summary: Unpause a project
+      operationId: unpauseProject
+      tags: [Projects]
+      parameters:
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Project unpaused.
+  /v9/projects/{idOrName}/customenvironments:
+    get:
+      summary: Retrieve custom environments
+      operationId: listCustomEnvironments
+      tags: [Environments]
+      parameters:
+        - name: idOrName
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Custom environments list.
+  /v5/domains:
+    get:
+      summary: List all the domains
+      operationId: listDomains
+      tags: [Domains]
+      responses:
+        '200':
+          description: Domains list.
+    post:
+      summary: Add an existing domain to the Vercel platform
+      operationId: addDomain
+      tags: [Domains]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+      responses:
+        '200':
+          description: Domain added.
+  /v6/domains/{domain}/config:
+    get:
+      summary: Get a domain's configuration
+      operationId: getDomainConfig
+      tags: [Domains]
+      parameters:
+        - name: domain
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Domain configuration.
+  /v8/artifacts/{hash}:
+    put:
+      summary: Upload a cache artifact
+      operationId: uploadCacheArtifact
+      tags: [Artifacts]
+      parameters:
+        - name: hash
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/octet-stream:
+            schema:
+              type: string
+              format: binary
+      responses:
+        '202':
+          description: Artifact accepted.
+  /v2/teams:
+    get:
+      summary: List teams
+      operationId: listTeams
+      tags: [Teams]
+      responses:
+        '200':
+          description: Teams list.
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: VercelToken

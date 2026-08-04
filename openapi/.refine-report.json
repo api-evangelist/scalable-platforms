@@ -1,0 +1,24 @@
+{
+  "provider": "scalable-platforms",
+  "sources": [
+    "scalable-platforms-artifacts-api-openapi.yml",
+    "scalable-platforms-deployments-api-openapi.yml",
+    "scalable-platforms-domains-api-openapi.yml",
+    "scalable-platforms-environments-api-openapi.yml",
+    "scalable-platforms-projects-api-openapi.yml",
+    "scalable-platforms-teams-api-openapi.yml"
+  ],
+  "outputs": [
+    "scalable-platforms-artifacts-api-openapi.yml",
+    "scalable-platforms-deployments-api-openapi.yml",
+    "scalable-platforms-domains-api-openapi.yml",
+    "scalable-platforms-environments-api-openapi.yml",
+    "scalable-platforms-projects-api-openapi.yml",
+    "scalable-platforms-teams-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
