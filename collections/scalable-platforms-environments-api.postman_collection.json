@@ -1,0 +1,128 @@
+{
+  "item": [
+    {
+      "id": "7e979c0d-fe1d-403b-afa9-5a8c12d4c0cd",
+      "name": "Environments",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "98127b84-63b3-4ee2-bfbc-1c70576ce09d",
+          "name": "Retrieve custom environments",
+          "request": {
+            "name": "Retrieve custom environments",
+            "description": {},
+            "url": {
+              "path": [
+                "v9",
+                "projects",
+                ":idOrName",
+                "customenvironments"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "idOrName",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "02ca47e5-a9f5-4810-bf46-b112e952fbb7",
+              "name": "Custom environments list.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v9",
+                    "projects",
+                    ":idOrName",
+                    "customenvironments"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "idOrName",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.vercel.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "513df466-1bd5-48cf-a0f7-7b87836d670b",
+    "name": "Vercel REST Artifacts Environments API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Vercel REST API provides programmatic control of Vercel projects,\ndeployments, domains, teams, and environment variables. The base URL is\nhttps://api.vercel.com and authentication uses a bearer token (personal\nor team access token). A full OpenAPI specification is published at\nhttps://openapi.vercel.sh/. This file is an API Evangelist research\nartifact for the scalable-platforms topic and captures a representative\nsubset of endpoints.\n\n\nContact Support:\n Name: API Evangelist",
+      "type": "text/plain"
+    }
+  }
+}

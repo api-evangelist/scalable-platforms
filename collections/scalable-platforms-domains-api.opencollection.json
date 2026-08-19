@@ -1,0 +1,68 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Vercel REST Artifacts Domains API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Domains",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all the domains",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.vercel.com/v5/domains"
+          },
+          "docs": "List all the domains"
+        },
+        {
+          "info": {
+            "name": "Add an existing domain to the Vercel platform",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.vercel.com/v5/domains",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Add an existing domain to the Vercel platform"
+        },
+        {
+          "info": {
+            "name": "Get a domain's configuration",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.vercel.com/v6/domains/:domain/config",
+            "params": [
+              {
+                "name": "domain",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a domain's configuration"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

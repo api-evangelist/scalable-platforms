@@ -1,0 +1,42 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Vercel REST Artifacts Environments API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Environments",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve custom environments",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.vercel.com/v9/projects/:idOrName/customenvironments",
+            "params": [
+              {
+                "name": "idOrName",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve custom environments"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

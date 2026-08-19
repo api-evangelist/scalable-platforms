@@ -1,0 +1,42 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Vercel REST Artifacts API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Artifacts",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Upload a cache artifact",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.vercel.com/v8/artifacts/:hash",
+            "params": [
+              {
+                "name": "hash",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Upload a cache artifact"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

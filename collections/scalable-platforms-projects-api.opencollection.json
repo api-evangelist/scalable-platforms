@@ -1,0 +1,86 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Vercel REST Artifacts Projects API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Projects",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List projects",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.vercel.com/v9/projects"
+          },
+          "docs": "List projects"
+        },
+        {
+          "info": {
+            "name": "Create a project",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.vercel.com/v9/projects",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a project"
+        },
+        {
+          "info": {
+            "name": "Pause a project",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.vercel.com/v1/projects/:projectId/pause",
+            "params": [
+              {
+                "name": "projectId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Pause a project"
+        },
+        {
+          "info": {
+            "name": "Unpause a project",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.vercel.com/v1/projects/:projectId/unpause",
+            "params": [
+              {
+                "name": "projectId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Unpause a project"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
