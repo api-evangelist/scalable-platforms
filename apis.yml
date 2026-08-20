@@ -29,6 +29,15 @@ tags:
 - Deployment
 - Developer Experience
 - DevOps
+- Platform-as-a-Service
+- Platform
+- Scalability
+- Serverless
+tags_raw:
+- Cloud Infrastructure
+- Deployment
+- Developer Experience
+- DevOps
 - PaaS
 - Platform
 - Scalability
@@ -44,6 +53,13 @@ apis:
   humanUrl: https://railway.app/
   baseUrl: https://backboard.railway.app/graphql/v2
   tags:
+  - Containers
+  - Deployment
+  - Developer Experience
+  - Platform-as-a-Service
+  - Railway
+  - Usage-Based Pricing
+  tags_raw:
   - Containers
   - Deployment
   - Developer Experience
@@ -128,6 +144,8 @@ apis:
   name: Scalable Platforms Deployments API
   description: The Deployments API from Scalable Platforms — 3 operation(s) for deployments.
   tags:
+  - Deployment
+  tags_raw:
   - Deployments
   properties:
   - type: OpenAPI
@@ -308,6 +326,8 @@ apis:
   name: Scalable Platforms Projects API
   description: The Projects API from Scalable Platforms — 3 operation(s) for projects.
   tags:
+  - Project
+  tags_raw:
   - Projects
   properties:
   - type: OpenAPI
@@ -368,6 +388,8 @@ apis:
   name: Scalable Platforms Teams API
   description: The Teams API from Scalable Platforms — 1 operation(s) for teams.
   tags:
+  - Team
+  tags_raw:
   - Teams
   properties:
   - type: OpenAPI
