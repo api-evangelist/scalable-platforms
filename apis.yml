@@ -6,6 +6,18 @@ description: >-
   computing, container platforms, and the tools that abstract infrastructure management
   so teams can focus on application delivery. Covers Railway, Render, Fly.io, Heroku,
   Vercel, Netlify, and Cloudflare Workers.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: self-serve
