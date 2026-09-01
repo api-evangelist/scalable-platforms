@@ -41,7 +41,7 @@ tags:
 - Deployment
 - Developer Experience
 - DevOps
-- PaaS
+- Platform-as-a-Service
 - Platform
 - Scalability
 - Serverless
@@ -68,7 +68,7 @@ apis:
   - Containers
   - Deployment
   - Developer Experience
-  - PaaS
+  - Platform-as-a-Service
   - Railway
   - Usage-Based Pricing
   tags_raw:
