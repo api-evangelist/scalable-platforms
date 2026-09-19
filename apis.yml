@@ -279,6 +279,8 @@ apis:
   name: Scalable Platforms Environments API
   description: The Environments API from Scalable Platforms — 1 operation(s) for environments.
   tags:
+  - Environment
+  tags_raw:
   - Environments
   properties:
   - type: OpenAPI
