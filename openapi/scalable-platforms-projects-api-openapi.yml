@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Vercel REST Artifacts Projects API
+  title: Vercel REST Projects API
   description: 'The Vercel REST API provides programmatic control of Vercel projects,
 
     deployments, domains, teams, and environment variables. The base URL is
@@ -13,9 +13,7 @@ info:
 
     artifact for the scalable-platforms topic and captures a representative
 
-    subset of endpoints.
-
-    '
+    subset of endpoints.'
   version: 1.0.0
   contact:
     name: API Evangelist

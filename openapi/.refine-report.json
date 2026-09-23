@@ -1,12 +1,7 @@
 {
   "provider": "scalable-platforms",
   "sources": [
-    "scalable-platforms-artifacts-api-openapi.yml",
-    "scalable-platforms-deployments-api-openapi.yml",
-    "scalable-platforms-domains-api-openapi.yml",
-    "scalable-platforms-environments-api-openapi.yml",
-    "scalable-platforms-projects-api-openapi.yml",
-    "scalable-platforms-teams-api-openapi.yml"
+    "_original/scalable-platforms-openapi.yml"
   ],
   "outputs": [
     "scalable-platforms-artifacts-api-openapi.yml",
@@ -19,6 +14,23 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "scalable-platforms-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "scalable-platforms-openapi.yml: declared missing tag: Artifacts",
+    "scalable-platforms-openapi.yml: declared missing tag: Deployments",
+    "scalable-platforms-openapi.yml: declared missing tag: Domains",
+    "scalable-platforms-openapi.yml: declared missing tag: Environments",
+    "scalable-platforms-openapi.yml: declared missing tag: Projects",
+    "scalable-platforms-openapi.yml: declared missing tag: Teams",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "scalable-platforms-artifacts-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "scalable-platforms-deployments-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "scalable-platforms-domains-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "scalable-platforms-environments-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "scalable-platforms-projects-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "scalable-platforms-teams-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
