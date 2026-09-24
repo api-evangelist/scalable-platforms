@@ -1,1 +1,0 @@
-# Scalable Platforms GraphQL API
