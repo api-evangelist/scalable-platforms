@@ -451,6 +451,9 @@ apis:
   - type: Pricing
     url: https://northflank.com/pricing
 common:
+- type: CapabilityMap
+  url: capabilities/scalable-platforms-capability-edges.yml
+  name: Scalable Platforms Business Capability Map
 - type: AgenticAccess
   url: agentic-access/scalable-platforms-agentic-access.yml
 - type: DomainSecurity
